@@ -1,0 +1,110 @@
+# robots.txt for debajyotideb.com
+#
+# Everything on this site is meant to be found, read, quoted and cited — by
+# traditional search engines and by AI answer engines alike. Nothing is
+# disallowed.
+#
+# The AI crawlers are listed explicitly on purpose. Most of them are allowed
+# by default, but a lot of sites block them, so naming them here states the
+# intent plainly: this content may be used to answer questions about
+# Debajyoti Deb and his research.
+#
+# IF YOU EVER CHANGE YOUR MIND: swap a bot's "Allow: /" for "Disallow: /".
+# Be aware that blocking these also removes you from AI-generated answers,
+# which is the opposite of what this file is for.
+
+User-agent: *
+Allow: /
+
+# ---------- Traditional search engines ----------
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# ---------- Academic and scholarly indexes ----------
+User-agent: Googlebot-News
+Allow: /
+
+User-agent: SemanticScholarBot
+Allow: /
+
+# ---------- AI answer engines and assistants ----------
+# OpenAI — ChatGPT training, search, and live browsing
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic — Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Google — Gemini and AI Overviews
+User-agent: Google-Extended
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Apple Intelligence / Siri
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta AI
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# Amazon
+User-agent: Amazonbot
+Allow: /
+
+# Common Crawl — the open dataset many models are trained on
+User-agent: CCBot
+Allow: /
+
+# Mistral
+User-agent: MistralAI-User
+Allow: /
+
+# You.com, Brave, Cohere
+User-agent: YouBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+Sitemap: https://debajyotideb.com/sitemap.xml

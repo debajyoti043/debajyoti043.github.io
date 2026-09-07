@@ -44,6 +44,12 @@
     var list = document.getElementById("pub-list");
     if (!list || typeof PUBLICATIONS === "undefined") return;
 
+    /* The publications are now written directly into index.html as plain
+       HTML, so that search engines and AI crawlers — which do not run
+       JavaScript — can actually read them. If they are already on the page,
+       leave them alone; this function stays only as a fallback. */
+    if (list.children.length) return;
+
     var link = document.getElementById("scholar-link");
     if (link && typeof SCHOLAR_URL !== "undefined") link.href = SCHOLAR_URL;
 

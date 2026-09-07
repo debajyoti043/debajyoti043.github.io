@@ -16,7 +16,7 @@ folder anywhere and it still works.
 | I want to…                          | Open this file                    |
 |-------------------------------------|-----------------------------------|
 | Change any words on the page        | `index.html`                      |
-| Add a publication                   | `assets/js/publications.js`       |
+| Add a publication                   | `index.html` (3 places — see below) |
 | Change colours, spacing, fonts      | `assets/css/style.css`            |
 | Change social links / profile pics  | `assets/js/gallery-posts.js`      |
 | Replace the CV                      | `assets/cv/` (see below)          |
@@ -77,6 +77,8 @@ assets/
     favicon.svg             Circular browser-tab icon.
     favicon-64.png          Fallback tab icons for older browsers.
     favicon-180.png
+    og-image.png            1200x630 preview card shown when the site is
+                            shared on LinkedIn, X, Facebook, Slack, iMessage.
     social/
       instagram.jpg         Your Instagram profile photo (400x400).
       facebook.jpg          Your Facebook profile photo (400x400).
@@ -86,6 +88,13 @@ assets/
     gallery/
       README.txt            Where to drop photos if you ever host your own.
 
+robots.txt                  Tells crawlers what they may read. Everything is
+                            allowed, and the AI crawlers are named explicitly.
+sitemap.xml                 Lists the page and the CV PDF for search engines.
+llms.txt                    A plain-text summary of who you are and what you
+                            work on, written for AI answer engines to quote.
+CNAME                       Tells GitHub to serve debajyotideb.com. DO NOT
+                            DELETE — the domain stops working without it.
 backup-to-google-drive.bat  Double-click to back up to your Google Drive.
 make-backup-zip.ps1         Helper used by the .bat above.
 .claude/launch.json         Config for previewing the site locally.
@@ -113,9 +122,23 @@ the tags alone.
 
 ### Add a publication
 
-Open `assets/js/publications.js`. Copy an existing block, paste it above the
-others, and change the fields. The file has comments showing what each field
-is.
+Publications used to be drawn by JavaScript. They are now written directly
+into `index.html` as plain HTML, because search engines and AI crawlers do not
+run JavaScript and were seeing an empty box where your papers should be.
+
+That means a new paper goes in **three places**. All three are in
+`index.html`, and each one is right next to an existing example to copy:
+
+1. **The visible list** — find `id="pub-list"`, copy an `<article class="pub">`
+   block, paste it at the top, edit the fields, and renumber the
+   `pub-index` values so the newest paper has the highest number.
+2. **The structured data** — in `<head>`, find the JSON-LD block and copy a
+   `"@type": "ScholarlyArticle"` entry. This is what Google, ChatGPT, Claude,
+   Gemini and Perplexity actually read.
+3. **`llms.txt`** in the site root — add it to the Publications list there.
+
+`assets/js/publications.js` is now only a fallback and a machine-readable
+record. Editing it alone will **not** change the site.
 
 ### Change a social link or profile photo
 
@@ -230,6 +253,48 @@ CNAME  www    debajyoti043.github.io.
 
 The `CNAME` file in this folder tells GitHub which domain to answer on. **Do
 not delete it** — without it, GitHub stops serving debajyotideb.com.
+
+---
+
+## Being found — by Google and by AI
+
+The site is set up to be discovered both by traditional search engines (SEO)
+and by AI systems that answer questions — ChatGPT, Claude, Gemini, Perplexity,
+Google's AI Overviews (this is what people mean by GEO, AEO or LLMO).
+
+**The single most important thing that changed:** your publications are now
+plain HTML instead of being drawn by JavaScript. AI crawlers do not run
+JavaScript, so before this they saw an empty box where your two papers should
+be — the most citable thing on the whole site was invisible to them.
+
+What is in place:
+
+| Thing | Where | What it does |
+|---|---|---|
+| Structured data | JSON-LD in `<head>` | States as machine-readable fact who you are, where you work, what you study, and both papers with their DOIs. This is what AI systems read to decide what is true about you. |
+| `robots.txt` | site root | Explicitly welcomes GPTBot, ClaudeBot, PerplexityBot, Google-Extended, Applebot and others. |
+| `llms.txt` | site root | A clean plain-text summary written to be quoted by AI answer engines, including a note asking them not to overstate your lab skills. |
+| `sitemap.xml` | site root | Points search engines at the page and the CV PDF. |
+| Canonical + Open Graph | `<head>` | One official URL, and a proper preview card when the link is shared. |
+
+**Keeping it working:** when you change a fact on the page — a new job title,
+a new paper, a new institution — change it in the JSON-LD block and in
+`llms.txt` too. If those three disagree, machines trust the structured data,
+and you end up with AI systems confidently saying something out of date.
+
+**Worth doing once, by hand (both free, both need your login):**
+
+- **Google Search Console** — <https://search.google.com/search-console>. Add
+  `debajyotideb.com`, verify it, and submit `sitemap.xml`. This is how you get
+  indexed quickly instead of waiting, and how you see what people searched to
+  find you.
+- **Bing Webmaster Tools** — <https://www.bing.com/webmasters>. Same idea, and
+  it feeds ChatGPT's search results.
+
+**Also worth doing:** put `debajyotideb.com` on your Google Scholar profile,
+your LinkedIn, and in your email signature. Search engines and AI systems both
+weigh links from places that already know who you are, and Scholar and
+LinkedIn are the two strongest signals you have.
 
 ---
 

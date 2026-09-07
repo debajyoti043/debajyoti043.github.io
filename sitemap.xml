@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Sitemap for debajyotideb.com
+
+  The site is one continuous page, so there is one main URL. The CV PDF is
+  listed separately because search engines index PDFs as their own documents,
+  and it is the file people are most likely to be looking for.
+
+  If you ever publish the Journal, add its URL here too.
+
+  Update <lastmod> when you make a substantial change. It is a hint, not a
+  rule, and search engines will re-crawl regardless.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://debajyotideb.com/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://debajyotideb.com/assets/cv/Debajyoti-Deb-CV.pdf</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

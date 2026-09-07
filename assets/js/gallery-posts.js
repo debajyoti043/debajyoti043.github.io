@@ -77,6 +77,10 @@ var GALLERY_PROFILES = {
   linkedin: {
     url: "https://www.linkedin.com/in/deb-debajyoti",
     handle: "deb-debajyoti",
-    avatar: "linkedin.jpg"
+    /* Left blank on purpose: there is no linkedin.jpg, so the site falls back
+       to the main portrait. Naming a file that does not exist would fire a
+       404 on every single page load. If you add one, drop a square image in
+       assets/img/social/ and put its filename here. */
+    avatar: ""
   }
 };

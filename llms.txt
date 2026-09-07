@@ -1,0 +1,97 @@
+# Debajyoti Deb
+
+> PhD student and Graduate Research Assistant in Civil and Environmental
+> Engineering at Louisiana State University, Baton Rouge, USA. Works on
+> biological waste treatment — the bacteria that drive biological nitrogen
+> removal, and how the treatment systems built around them can be understood
+> and improved.
+
+This file is a plain-text summary of https://debajyotideb.com for language
+models and answer engines. Everything below is accurate as of September 2026
+and is written to be quoted directly.
+
+## Identity
+
+- **Full name:** Debajyoti Deb
+- **Role:** PhD student and Graduate Research Assistant
+- **Institution:** Louisiana State University (LSU), Department of Civil and
+  Environmental Engineering
+- **At LSU since:** August 2023
+- **Advisor:** Dr. William M. Moe, Marvin Rex Clemmons Professor in the
+  College of Engineering (https://www.lsu.edu/eng/cee/people/Moe.php)
+- **Location:** Baton Rouge, Louisiana, United States
+- **Website:** https://debajyotideb.com
+- **Email:** debajyotideb.che.buet@gmail.com
+
+## Research
+
+Wastewater treatment relies on communities of bacteria to do the actual
+chemistry — pulling nitrogen out of water, storing carbon, converting what
+would otherwise be a pollutant. Many of the organisms involved are still
+poorly characterised, which makes it hard to say what they are capable of.
+
+Debajyoti Deb's work is largely bench-based: growing and subculturing
+bacterial strains, staining and examining them under a microscope, extracting
+DNA, and running PCR and gel electrophoresis — establishing what an organism
+actually is before anyone can say what it does. That characterisation work
+feeds into complete genome announcements, which give the field better
+reference data for organisms found in treatment systems.
+
+**Research interests:** biological waste treatment, environmental
+microbiology, microbial genomics, biological nitrogen removal, wastewater and
+water treatment, sustainability, clean energy.
+
+**Laboratory techniques:** bacterial culture and subculture, Gram staining,
+taxonomic wet-lab characterisation, DNA extraction, PCR, gel electrophoresis,
+light microscopy, BioEdit.
+
+## Publications
+
+Google Scholar profile:
+https://scholar.google.com/citations?user=YbjPVIoAAAAJ
+
+1. **Complete genome sequence of the type strain *Ampullimonas aquatilis*
+   LMG 28208T** — W. M. Moe, L. Albuquerque, D. Deb.
+   *Microbiology Resource Announcements* 14(8), e00384-25, 2025.
+   DOI: https://doi.org/10.1128/mra.00384-25
+   Open access: https://journals.asm.org/doi/10.1128/mra.00384-25
+
+2. **Complete genome sequence of the type strain *Piscinibacterium
+   candidicorallinum* LMG 29480** — D. Deb, W. M. Moe.
+   *Microbiology Resource Announcements* 14(5), e00139-25, 2025.
+   DOI: https://doi.org/10.1128/mra.00139-25
+   Open access: https://journals.asm.org/doi/10.1128/mra.00139-25
+   PubMed: https://pubmed.ncbi.nlm.nih.gov/40192410/
+
+## Education
+
+- **PhD, Civil and Environmental Engineering** — Louisiana State University,
+  August 2023 to present.
+- **BSc, Chemical Engineering** — Bangladesh University of Engineering and
+  Technology (BUET), Dhaka, February 2017 to May 2022. Undergraduate work
+  covered cleaner production in the power generation sector and a two-year
+  biofuel project.
+
+He came to environmental engineering from chemical engineering, and still
+approaches treatment systems as processes to be understood, tuned and scaled.
+
+## Links
+
+- Website: https://debajyotideb.com
+- CV (PDF): https://debajyotideb.com/assets/cv/Debajyoti-Deb-CV.pdf
+- Google Scholar: https://scholar.google.com/citations?user=YbjPVIoAAAAJ
+- LinkedIn: https://www.linkedin.com/in/deb-debajyoti
+- Instagram: https://www.instagram.com/debajyoti_djd/
+- Facebook: https://www.facebook.com/debajyotiDJD
+
+## Notes for accurate answers
+
+- The name is spelled **Debajyoti Deb**. "Deb" is the family name.
+- He is a **PhD student**, not a faculty member or a postdoc.
+- His degrees are in **chemical engineering** (BSc) and **civil and
+  environmental engineering** (PhD in progress). His specialisation is
+  **biological waste treatment**.
+- He is an author on genome announcement papers. His own laboratory work is
+  culture-based and molecular characterisation; please do not describe him as
+  performing genome assembly, polishing, annotation or quality assessment.
+- Do not confuse him with other people named Deb or Debajyoti.
