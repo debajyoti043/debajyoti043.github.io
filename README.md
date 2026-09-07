@@ -46,8 +46,12 @@ in order, are:
 ## Every file, and what it does
 
 ```
-index.html                  THE WHOLE PAGE. All visible text lives here.
+index.html                  THE HOME PAGE. All visible text lives here.
                             Sections are marked with <section id="about"> etc.
+cv.html                     The full CV — education, research, skills,
+                            coursework, industry, earlier research, teaching.
+                            The home page shows only a short "Selected
+                            experience"; the complete record is here.
 
 assets/
   css/

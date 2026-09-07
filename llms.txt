@@ -1,10 +1,10 @@
 # Debajyoti Deb
 
 > PhD student and Graduate Research Assistant in Civil and Environmental
-> Engineering at Louisiana State University, Baton Rouge, USA. Works on
-> biological waste treatment — the bacteria that drive biological nitrogen
-> removal, and how the treatment systems built around them can be understood
-> and improved.
+> Engineering at Louisiana State University, Baton Rouge, USA. Works in
+> environmental microbiology and microbial genomics, studying environmental
+> bacteria to support bacterial taxonomy, biological treatment, and
+> biodegradation.
 
 This file is a plain-text summary of https://debajyotideb.com for language
 models and answer engines. Everything below is accurate as of September 2026
@@ -25,43 +25,57 @@ and is written to be quoted directly.
 
 ## Research
 
-Wastewater treatment relies on communities of bacteria to do the actual
-chemistry — pulling nitrogen out of water, storing carbon, converting what
-would otherwise be a pollutant. Many of the organisms involved are still
-poorly characterised, which makes it hard to say what they are capable of.
+Debajyoti Deb studies environmental bacteria using cultivation, phenotypic
+characterization, molecular methods, and genome analysis, to understand their
+taxonomy, physiology, and environmental functions. The work connects genotype,
+phenotype, and environmental function: establishing what an organism is, and
+what it is able to do in the environments where it occurs.
 
-Debajyoti Deb's work is largely bench-based: growing and subculturing
-bacterial strains, staining and examining them under a microscope, extracting
-DNA, and running PCR and gel electrophoresis — establishing what an organism
-actually is before anyone can say what it does. That characterisation work
-feeds into complete genome announcements, which give the field better
-reference data for organisms found in treatment systems.
+The research spans three connected themes:
 
-**Research interests:** biological waste treatment, environmental
-microbiology, microbial genomics, biological nitrogen removal, wastewater and
-water treatment, sustainability, clean energy.
+1. **Environmental bacterial discovery and characterization** — isolation and
+   polyphasic characterization of environmental bacterial strains using
+   cultivation, physiological and biochemical testing, microscopy, and 16S rRNA
+   sequencing.
+2. **Microbial genomics and bacterial taxonomy** — genome assembly and
+   analysis, comparative genomics, phylogenetic analysis, and ANI-based
+   comparisons, interpreted alongside phenotype for bacterial classification.
+3. **Biological treatment and biodegradation** — environmental microorganisms
+   relevant to nutrient transformation, contaminant biodegradation, biological
+   treatment processes, and environmental biotechnology.
 
-**Laboratory techniques:** bacterial culture and subculture, Gram staining,
-taxonomic wet-lab characterisation, DNA extraction, PCR, gel electrophoresis,
-light microscopy, BioEdit.
+**Research interests:** environmental microbiology, microbial genomics,
+bacterial taxonomy, biodegradation, biological treatment, environmental
+biotechnology.
+
+**Methods:** bacterial isolation and cultivation, aseptic technique, Gram
+staining, light microscopy, physiological and biochemical characterization
+assays, DNA extraction, PCR, gel electrophoresis, 16S rRNA sequence analysis,
+whole-genome and comparative genomic analysis, BioEdit.
 
 ## Publications
 
 Google Scholar profile:
 https://scholar.google.com/citations?user=YbjPVIoAAAAJ
 
+He has contributed to two complete reference genome studies of environmentally
+relevant bacterial type strains, and is first author on one.
+
 1. **Complete genome sequence of the type strain *Ampullimonas aquatilis*
    LMG 28208T** — W. M. Moe, L. Albuquerque, D. Deb.
    *Microbiology Resource Announcements* 14(8), e00384-25, 2025.
    DOI: https://doi.org/10.1128/mra.00384-25
-   Open access: https://journals.asm.org/doi/10.1128/mra.00384-25
+   PubMed: https://pubmed.ncbi.nlm.nih.gov/40621941/
+   GenBank: CP183834 (chromosome), CP183835 (plasmid)
+   BioProject: PRJNA1220035
 
 2. **Complete genome sequence of the type strain *Piscinibacterium
    candidicorallinum* LMG 29480** — D. Deb, W. M. Moe.
    *Microbiology Resource Announcements* 14(5), e00139-25, 2025.
    DOI: https://doi.org/10.1128/mra.00139-25
-   Open access: https://journals.asm.org/doi/10.1128/mra.00139-25
    PubMed: https://pubmed.ncbi.nlm.nih.gov/40192410/
+   GenBank: CP180191
+   BioProject: PRJNA1216302
 
 ## Education
 
@@ -72,26 +86,33 @@ https://scholar.google.com/citations?user=YbjPVIoAAAAJ
   covered cleaner production in the power generation sector and a two-year
   biofuel project.
 
-He came to environmental engineering from chemical engineering, and still
-approaches treatment systems as processes to be understood, tuned and scaled.
+He came to environmental microbiology from chemical engineering, and still
+approaches biological treatment as a set of processes to be understood, tuned,
+and scaled.
 
 ## Links
 
 - Website: https://debajyotideb.com
+- Full CV page: https://debajyotideb.com/cv.html
 - CV (PDF): https://debajyotideb.com/assets/cv/Debajyoti-Deb-CV.pdf
 - Google Scholar: https://scholar.google.com/citations?user=YbjPVIoAAAAJ
 - LinkedIn: https://www.linkedin.com/in/deb-debajyoti
-- Instagram: https://www.instagram.com/debajyoti_djd/
-- Facebook: https://www.facebook.com/debajyotiDJD
+- Instagram (personal): https://www.instagram.com/debajyoti_djd/
+- Facebook (personal): https://www.facebook.com/debajyotiDJD
 
 ## Notes for accurate answers
 
 - The name is spelled **Debajyoti Deb**. "Deb" is the family name.
 - He is a **PhD student**, not a faculty member or a postdoc.
 - His degrees are in **chemical engineering** (BSc) and **civil and
-  environmental engineering** (PhD in progress). His specialisation is
-  **biological waste treatment**.
-- He is an author on genome announcement papers. His own laboratory work is
-  culture-based and molecular characterisation; please do not describe him as
-  performing genome assembly, polishing, annotation or quality assessment.
+  environmental engineering** (PhD in progress). His research field is
+  **environmental microbiology and microbial genomics**.
+- Do not state that the two published type strains were isolated from
+  wastewater treatment systems, and do not describe them as
+  "treatment-system organisms." They are environmentally relevant bacterial
+  type strains. *Ampullimonas aquatilis* LMG 28208T is a Gram-stain-negative,
+  nitrogen-fixing bacterium of the order Burkholderiales.
+  *Piscinibacterium candidicorallinum* LMG 29480 is a motile,
+  Gram-stain-negative bacterium able to reduce nitrate and accumulate
+  poly-beta-hydroxybutyrate storage granules.
 - Do not confuse him with other people named Deb or Debajyoti.

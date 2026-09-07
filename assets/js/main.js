@@ -17,7 +17,10 @@
     { id: "socials",  label: "Socials" },
     { id: "contact",  label: "Contact" }
   ];
-  var ON_MAIN = PAGE !== "journal";
+  /* Only the single-page home uses in-page "#section" links and scroll-spy.
+     Every other page (cv.html, the Journal) must link back to index.html#id,
+     so this is a whitelist rather than "anything that isn't the Journal". */
+  var ON_MAIN = PAGE === "home";
 
   /* ---- Journal visibility ---------------------------------------------
      The Journal is OFFLINE. Its files are not in this site folder at all —
@@ -39,12 +42,16 @@
   /* ---- Social profiles -------------------------------------------------
      Edit a URL here and it updates the footer, the contact page and
      anywhere else the row is rendered. Order below is the display order. */
+  /* Professional profiles first — this row is what an academic reader scans.
+     Instagram and Facebook stay reachable but sit after the academic links.
+     TODO (optional): if you create an ORCID or ResearchGate profile, add it
+     here directly after Google Scholar. Do not add a placeholder URL. */
   var SOCIAL = [
     { net: "scholar",   label: "Google Scholar", url: "https://scholar.google.com/citations?user=YbjPVIoAAAAJ&hl=en" },
     { net: "linkedin",  label: "LinkedIn",       url: "https://www.linkedin.com/in/deb-debajyoti" },
+    { net: "email",     label: "Email",          url: "mailto:debajyotideb.che.buet@gmail.com" },
     { net: "instagram", label: "Instagram",      url: "https://www.instagram.com/debajyoti_djd/" },
-    { net: "facebook",  label: "Facebook",       url: "https://www.facebook.com/debajyotiDJD" },
-    { net: "email",     label: "Email",          url: "mailto:debajyotideb.che.buet@gmail.com" }
+    { net: "facebook",  label: "Facebook",       url: "https://www.facebook.com/debajyotiDJD" }
   ];
 
   /* Brand glyphs, 24x24 viewBox, single path, filled with currentColor. */
