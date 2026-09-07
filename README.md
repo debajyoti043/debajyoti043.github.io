@@ -182,22 +182,32 @@ Edit whatever you want, then run `auto-publish.ps1` (right-click > Run with
 PowerShell). It saves your changes, pushes them to GitHub, and the live site
 updates itself. If nothing changed it does nothing.
 
-### To publish automatically, forever (recommended)
+### Automatic publishing — ALREADY SET UP
 
-Register a Windows Scheduled Task once and you never think about it again — it
-publishes 5 minutes after you log in and again at 9 PM daily, and does nothing
-on days you changed nothing. **No Google Drive, no background app, no memory
-used.** Open PowerShell **as Administrator** and paste this in one go:
+**This is done. You do not need to do anything.**
 
-```powershell
-$s="C:\Users\Deb\Claude Code\Portfolio website\auto-publish.ps1"; $n="Publish debajyotideb.com"; $a=New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File `"$s`""; $t1=New-ScheduledTaskTrigger -AtLogOn; $t1.Delay="PT5M"; $t2=New-ScheduledTaskTrigger -Daily -At 9pm; $set=New-ScheduledTaskSettingsSet -StartWhenAvailable -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries; Register-ScheduledTask -TaskName $n -Action $a -Trigger @($t1,$t2) -Settings $set -Force
+A shortcut sits in your Windows Startup folder:
+
+```
+C:\Users\Deb\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\
+    Publish debajyotideb.com.lnk
 ```
 
-To remove it later:
+Every time you log in to Windows it runs `auto-publish.ps1` in a hidden window.
+If you changed something, it is committed, pushed, and live on
+debajyotideb.com about a minute later. If you changed nothing, it does nothing
+and exits. **No Google Drive, no background app, no memory used** — it runs for
+a second at login and stops.
 
-```powershell
-Unregister-ScheduledTask -TaskName "Publish debajyotideb.com" -Confirm:$false
-```
+A Windows *Scheduled Task* would also have added a 9 PM daily run, but creating
+one on this PC requires Administrator rights. The Startup shortcut needs none
+and covers the same need, since you log in most days.
+
+**To turn it off:** press `Win+R`, type `shell:startup`, press Enter, and delete
+`Publish debajyotideb.com.lnk`. That is the whole removal process.
+
+**To publish right now** without waiting for a login, right-click
+`auto-publish.ps1` and choose *Run with PowerShell*.
 
 **One caveat worth knowing:** with the task registered, any change you save gets
 published automatically. That is the point, but it does mean a half-finished
