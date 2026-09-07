@@ -383,31 +383,52 @@
       <span class="kicker" data-reveal>Contact</span>
       <h2 data-reveal style="--d:.06s">Let's talk</h2>
       <p class="lede" data-reveal style="--d:.12s">
-        Research, collaboration, or just to say hello — the form reaches me directly,
-        and so does email.
+        Research, collaboration, or just to say hello — email is the fastest way
+        to reach me.
       </p>
 
       <div class="split" style="margin-top:2.5rem;">
         <div class="card" data-reveal>
           <!--
-            Static site, no backend — this posts to Formspree (free tier).
-            1. Sign up at formspree.io   2. Create a form   3. Paste its ID below.
+            TO ADD A WORKING CONTACT FORM (about 2 minutes):
+              1. Sign up free at formspree.io and create a form.
+              2. It gives you an ID that looks like "xayzbqwe".
+              3. Delete this whole <div class="mailto-card"> block and paste in
+                 the form below, replacing YOUR_FORM_ID with that ID.
+
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+              <div class="field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="_replyto" placeholder="you@example.com" required />
+              </div>
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" placeholder="What's on your mind?" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width:100%;">Send message</button>
+            </form>
+
+            Until then, the card below sends people straight to your inbox —
+            which is honest, and never loses a message.
           -->
-          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-            <div class="field">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Your name" required />
-            </div>
-            <div class="field">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="_replyto" placeholder="you@example.com" required />
-            </div>
-            <div class="field">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="6" placeholder="What's on your mind?" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary" style="width:100%;">Send message</button>
-          </form>
+          <div class="mailto-card">
+            <span class="kicker" style="margin-bottom:1.25rem;">Write to me</span>
+            <p style="margin-bottom:1.75rem;">
+              Questions about the research, a possible collaboration, or anything
+              else — send a note and I'll reply.
+            </p>
+            <a class="btn btn-primary" style="width:100%;"
+               href="mailto:debajyotideb.che.buet@gmail.com?subject=Hello%20from%20debajyotideb.com">
+              Send me an email
+            </a>
+            <p class="dim" style="margin:1.25rem 0 0; font-size:0.85rem;">
+              Opens your mail app. No form, no third party, nothing stored.
+            </p>
+          </div>
         </div>
 
         <aside class="card sticky-side" data-reveal style="--d:.1s;">
