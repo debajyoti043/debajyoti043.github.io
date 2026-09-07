@@ -851,6 +851,16 @@ body.cursor-live #cursor-dot.hide { opacity: 0; }
    brand-approved reversed treatment. A plain invert() would shift its purple
    to a colour LSU does not use. Light mode keeps the original purple. */
 :root[data-theme="dark"] .stat-logo.invertible { filter: brightness(0) invert(1); }
+/* On phones the three cards fall into a 2x2 grid and leave a dead cell in the
+   corner. Give the last card (LSU) the full width and centre its contents so
+   the block reads as finished. Above 500px all three fit on one row; below
+   350px they already stack one per row — so this only applies in between. */
+@media (min-width: 350px) and (max-width: 499px) {
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .stat:last-child { grid-column: 1 / -1; }
+  .stat:last-child .stat-num { justify-content: center; }
+  .stat:last-child .stat-label { text-align: center; }
+}
 
 /* ---------------------------------------------------------
    10. Publications
