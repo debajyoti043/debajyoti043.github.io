@@ -1,0 +1,248 @@
+%-------------------------------------------------------------
+% Debajyoti Deb — CV (portfolio website version)
+%
+% Layout follows the original resume template:
+%   Author  : Anubhav Singh  (https://github.com/xprilion)
+%   License : MIT
+%
+% Content notes — deliberately left out of this public version:
+%   - personal mobile number
+%   - named referees with their phone numbers and addresses
+%   - undergraduate CGPA, GRE and IELTS scores
+% Add any of them back for a specific application that asks.
+%-------------------------------------------------------------
+
+\documentclass[a4paper,20pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+
+% Browsers title the tab from the PDF's own /Title metadata (falling back to
+% the filename only when it's absent), so set it here — this is what shows
+% when the CV is opened in a new tab from the website.
+\hypersetup{
+  pdftitle={Debajyoti Deb CV},
+  pdfauthor={Debajyoti Deb},
+  pdfsubject={Curriculum Vitae},
+  pdfkeywords={biological waste treatment, environmental engineering,
+               environmental microbiology, Louisiana State University}
+}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.530in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.45in}
+\addtolength{\textheight}{1in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting — small caps with a rule underneath
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemPlain}[1]{
+  \item\small{#1 \vspace{-2pt}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\LARGE Debajyoti Deb}} & Website: \href{https://debajyotideb.com}{debajyotideb.com} \\
+  PhD Student, Civil \& Environmental Engineering & Email: \href{mailto:debajyotideb.che.buet@gmail.com}{debajyotideb.che.buet@gmail.com} \\
+  Louisiana State University, Baton Rouge, LA, USA & Scholar: \href{https://scholar.google.com/citations?user=YbjPVIoAAAAJ}{Debajyoti Deb} \quad LinkedIn: \href{https://www.linkedin.com/in/deb-debajyoti}{deb-debajyoti} \\
+\end{tabular*}
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Louisiana State University}{Baton Rouge, Louisiana, USA}
+      {Doctor of Philosophy in Civil \& Environmental Engineering}{August 2023 - Present}
+      \resumeItemListStart
+        \resumeItem{Research Area}{Biological waste treatment --- microbial treatment of wastewater}
+        \resumeItem{Advisor}{\href{https://www.lsu.edu/eng/cee/people/Moe.php}{Dr. William M. Moe}, Marvin Rex Clemmons Professor in the College of Engineering}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Bangladesh University of Engineering and Technology (BUET)}{Dhaka, Bangladesh}
+      {Bachelor of Science in Chemical Engineering}{February 2017 - May 2022}
+  \resumeSubHeadingListEnd
+
+%-----------PUBLICATIONS-----------------
+\section{Publications}
+  \resumeSubHeadingListStart
+    \resumeItemListStart
+      \resumeItemPlain{W. M. Moe, L. Albuquerque, \textbf{D. Deb} (2025). Complete genome sequence of the type strain \textit{Ampullimonas aquatilis} LMG 28208\textsuperscript{T}. \textit{Microbiology Resource Announcements} 14(8), e00384-25. \href{https://doi.org/10.1128/mra.00384-25}{doi:10.1128/mra.00384-25}}
+      \resumeItemPlain{\textbf{D. Deb}, W. M. Moe (2025). Complete genome sequence of the type strain \textit{Piscinibacterium candidicorallinum} LMG 29480. \textit{Microbiology Resource Announcements} 14(5), e00139-25. \href{https://doi.org/10.1128/mra.00139-25}{doi:10.1128/mra.00139-25}}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-6pt}
+
+%-----------RESEARCH EXPERIENCE-----------------
+\section{Research Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Louisiana State University}{Baton Rouge, Louisiana, USA}
+      {Graduate Research Assistant}{August 2023 - Present}
+      \resumeItemListStart
+        \resumeItem{Focus}{Doctoral research in biological waste treatment under \href{https://www.lsu.edu/eng/cee/people/Moe.php}{Dr. William M. Moe}, on bacteria relevant to biological nitrogen removal in wastewater treatment systems}
+        \resumeItem{Cultivation}{Preparing cultures and subcultures for the isolation and maintenance of bacterial strains under aseptic conditions}
+        \resumeItem{Molecular Characterisation}{DNA extraction, PCR and gel electrophoresis; sequence inspection and alignment in BioEdit}
+        \resumeItem{Taxonomic Characterisation}{Gram staining, light microscopy and associated wet-lab assays used to describe and classify bacterial strains}
+        \resumeItem{Output}{Contributed to two complete reference genome announcements for bacterial type strains associated with treatment systems; first author on one}
+        \resumeItem{Funding}{Work supported by the Governor's Biotechnology Initiative of the Louisiana Board of Regents, through the LSU Hazardous Substance Research Center Environmental Biotechnology Initiative}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------RESEARCH INTEREST-----------------
+\section{Research Interest}
+  \resumeSubHeadingListStart
+    \item[]
+    \begin{multicols}{3}
+      \begin{itemize}[leftmargin=*, itemsep=1pt, topsep=0pt]
+        \small
+        \item Biological Waste Treatment
+        \item Environmental Microbiology
+        \item Microbial Genomics
+        \item Biological Nitrogen Removal
+        \item Water Treatment
+        \item Sustainability
+      \end{itemize}
+    \end{multicols}
+    \vspace{-8pt}
+  \resumeSubHeadingListEnd
+
+%-----------SKILLS-----------------
+\section{Skillset}
+  \resumeSubHeadingListStart
+    \resumeItemListStart
+      \resumeItem{Microbiology}{Bacterial culturing and subculturing, aseptic technique, isolation and maintenance of strains, Gram staining, light microscopy, autoclaving, taxonomic characterisation assays}
+      \resumeItem{Molecular Biology}{DNA extraction, PCR, gel electrophoresis}
+      \resumeItem{Software}{BioEdit (sequence alignment and editing), Aspen HYSYS, MATLAB, AutoCAD (2D), Microsoft Office}
+      \resumeItem{Languages}{Bangla (native), English (full professional proficiency)}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-6pt}
+
+%-----------COURSEWORK-----------------
+\section{Graduate Coursework}
+  \resumeSubHeadingListStart
+    \item[]
+    \begin{multicols}{2}
+      \begin{itemize}[leftmargin=*, itemsep=1pt, topsep=0pt]
+        \small
+        \item Advanced Topics in Biodegradation
+        \item Theory and Operation of Wastewater Treatment Facilities
+        \item Physical/Chemical Processes in Water and Wastewater Treatment
+        \item Advanced Topics in Water Quality and Treatment
+        \item Design of Solid and Hazardous Waste Management Systems
+        \item Special Topics in Environmental Engineering Science
+        \item Special Topics in Biological Engineering
+        \item Sustainability Engineering
+        \item Integrated Environmental Issues
+        \item Environmental Planning and Management
+        \item Applied Ecology
+        \item Experimental Statistics I
+      \end{itemize}
+    \end{multicols}
+    \vspace{-8pt}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Industry Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {British American Tobacco Bangladesh}{Dhaka, Bangladesh}
+      {Team Leader - Secondary Manufacturing Department}{October 2022 - November 2022}
+      \resumeItemListStart
+        \resumeItem{Role}{Led a team of equipment owners in secondary manufacturing operations}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {ASM Chemical Industries Limited}{Gazipur, Bangladesh}
+      {Industrial Trainee}{May 2022}
+      \resumeItemListStart
+        \resumeItem{Training}{Two-week attachment with a chlor-alkali manufacturer producing stable bleaching powder, poly-aluminium chloride, caustic soda and chlorinated paraffin wax}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------EARLIER WORK-----------------
+% Undergraduate work, kept brief on purpose: for US roles the doctoral
+% research and publications above carry the weight.
+\section{Earlier Research \& Undergraduate Projects}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Bio \& Environmental Technology Research Group, BUET}{Dhaka, Bangladesh}
+      {Undergraduate Research Assistant}{2018 - 2020}
+      \resumeItemListStart
+        \resumeItem{Bio-Fuel}{Extraction of ethanol from \textit{Chlorella vulgaris}; scaled algal cultures from 200 mL to 25 L by tuning culture composition, temperature and humidity}
+      \resumeItemListEnd
+    \resumeItemListStart
+      \resumeItem{Undergraduate Thesis}{Cleaner production practice in the power generation sector of Bangladesh --- process development, hazard reduction and waste minimisation across plants of several generation technologies}
+      \resumeItem{Undergraduate Design}{100 tons per day plant re-refining used industrial lube oil into API Grade II base oil by thermal de-asphalting}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-6pt}
+
+%-----------TEACHING-----------------
+% Keep this section for academic / teaching-track applications, where
+% instructional experience is explicitly assessed. For most US industry
+% roles it adds little — comment the whole section out in that case.
+\section{Teaching Experience}
+  \resumeSubHeadingListStart
+    \resumeItemListStart
+      \resumeItem{Instructor}{UDVASH and OMECA coaching institutes, Bangladesh --- classroom instruction in mathematics, thermodynamics, reaction kinetics and electrochemistry for university admission candidates (2018 - 2022)}
+      \resumeItem{Content Development}{Produced recorded lecture material for Emerging Study, an ed-tech platform}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\end{document}
