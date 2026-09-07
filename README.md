@@ -167,6 +167,62 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command "$l=[Net.HttpListener]::n
 
 ---
 
+## The site is LIVE at debajyotideb.com
+
+It is hosted free on **GitHub Pages** from this repository:
+<https://github.com/debajyoti043/debajyoti043.github.io>
+
+Publishing and backing up are now **the same action**. When you push to GitHub,
+GitHub rebuilds debajyotideb.com about a minute later, and your code is safely
+off this computer at the same time.
+
+### To publish a change
+
+Edit whatever you want, then run `auto-publish.ps1` (right-click > Run with
+PowerShell). It saves your changes, pushes them to GitHub, and the live site
+updates itself. If nothing changed it does nothing.
+
+### To publish automatically, forever (recommended)
+
+Register a Windows Scheduled Task once and you never think about it again — it
+publishes 5 minutes after you log in and again at 9 PM daily, and does nothing
+on days you changed nothing. **No Google Drive, no background app, no memory
+used.** Open PowerShell **as Administrator** and paste this in one go:
+
+```powershell
+$s="C:\Users\Deb\Claude Code\Portfolio website\auto-publish.ps1"; $n="Publish debajyotideb.com"; $a=New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-NoProfile -WindowStyle Hidden -ExecutionPolicy Bypass -File `"$s`""; $t1=New-ScheduledTaskTrigger -AtLogOn; $t1.Delay="PT5M"; $t2=New-ScheduledTaskTrigger -Daily -At 9pm; $set=New-ScheduledTaskSettingsSet -StartWhenAvailable -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries; Register-ScheduledTask -TaskName $n -Action $a -Trigger @($t1,$t2) -Settings $set -Force
+```
+
+To remove it later:
+
+```powershell
+Unregister-ScheduledTask -TaskName "Publish debajyotideb.com" -Confirm:$false
+```
+
+**One caveat worth knowing:** with the task registered, any change you save gets
+published automatically. That is the point, but it does mean a half-finished
+edit can go live. If you are mid-experiment, either unregister the task or make
+your changes and check them locally first.
+
+Every run is logged to `auto-publish.log` next to this file.
+
+### How the domain is wired
+
+Namecheap holds `debajyotideb.com`. Its DNS points at GitHub:
+
+```
+A      @      185.199.108.153
+A      @      185.199.109.153
+A      @      185.199.110.153
+A      @      185.199.111.153
+CNAME  www    debajyoti043.github.io.
+```
+
+The `CNAME` file in this folder tells GitHub which domain to answer on. **Do
+not delete it** — without it, GitHub stops serving debajyotideb.com.
+
+---
+
 ## Backups — this is the whole safety net
 
 **`backup-to-google-drive.bat`** — double-click it. That's the whole routine.
@@ -201,17 +257,20 @@ brings the full history with it.
 
 ## Still to do
 
-- **Contact form**: `index.html` still contains the placeholder `YOUR_FORM_ID`.
-  Sign up free at [formspree.io](https://formspree.io), create a form, and
-  replace `YOUR_FORM_ID` with the id it gives you. Until then the form will not
-  deliver mail.
+- **Turn on HTTPS.** GitHub issues the certificate automatically within about
+  an hour of the domain going live. Once it has, go to the repo's
+  **Settings > Pages** and tick **Enforce HTTPS**, so the site is served over
+  `https://` instead of `http://`. This is a one-time click.
+- **Register the auto-publish task** so you never have to remember to publish.
+  Open PowerShell **as Administrator** and paste the command in the section
+  above. Skip it if you would rather publish by hand.
+- **Contact form**: the contact section currently shows a direct "Send me an
+  email" button, which always works. If you want a real form instead, sign up
+  free at [formspree.io](https://formspree.io) and follow the instructions in
+  the comment inside the `#contact` section of `index.html`.
 - **BUET dates**: the site says "2018–2020" for the research assistant role.
   The Overleaf CV says May 2018 – Mar 2020; LinkedIn says Apr 2018 – Dec 2019.
   Pick whichever is right and make `index.html` and `CV.tex` agree.
-- **Going live**: the domain `debajyotideb.com` is registered at Namecheap but
-  the site is not published yet. Any static host works — Namecheap hosting,
-  GitHub Pages (free), Netlify (free) — because there is nothing to run server
-  side. Upload the contents of this folder and point the domain at it.
 
 ---
 
