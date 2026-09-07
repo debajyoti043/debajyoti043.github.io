@@ -169,15 +169,29 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command "$l=[Net.HttpListener]::n
 
 ## Backups — this is the whole safety net
 
-**`backup-to-google-drive.bat`** — double-click it.
+**`backup-to-google-drive.bat`** — double-click it. That's the whole routine.
 
-- If **Google Drive for Desktop** is installed, it copies the site and the
-  offline Journal into `My Drive\Website-Backup\` and Drive syncs it to the
-  cloud. This is the version worth having: one double-click, done.
-- If it is **not** installed, it builds a dated `.zip` on your Desktop and
-  opens drive.google.com so you can drag the zip in.
+**Google Drive does not need to be running, and must NOT be set to start with
+Windows.** The script handles it:
+
+1. If Drive is already running, it just uses it and leaves it running.
+2. If Drive is closed, it starts Drive itself (takes about 8 seconds), copies
+   the files, waits 45 seconds for the upload, then **closes Drive again**.
+
+So Drive uses zero memory except during the backup. That is deliberate — the
+app sits at ~135 MB when resident, which is not worth paying for something used
+once a session.
+
+Everything lands in `My Drive\Website-Backup\`, holding `Portfolio website` and
+`_journal-offline`. Check it at drive.google.com any time.
+
+If Drive can't be reached at all, the script falls back to building a dated
+`.zip` on the Desktop and opening drive.google.com so you can drag it in.
 
 Run it after any session where you changed something.
+
+If the upload hasn't finished when Drive closes, nothing is lost — the files
+sit in Drive's local cache and finish uploading the next time it starts.
 
 Every saved version is also kept in the hidden `.git` folder inside this
 directory, and that folder is included in the backup — so a restored backup
