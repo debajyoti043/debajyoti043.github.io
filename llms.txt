@@ -18,6 +18,7 @@ and is written to be quoted directly.
 - **Institution:** Louisiana State University (LSU), Department of Civil and
   Environmental Engineering
 - **At LSU since:** August 2023
+- **Expected PhD completion:** 2028
 - **Advisor:** Dr. William M. Moe, Marvin Rex Clemmons Professor in the
   College of Engineering (https://www.lsu.edu/eng/cee/people/Moe.php)
 - **Location:** Baton Rouge, Louisiana, United States
@@ -60,9 +61,10 @@ treatment, bioremediation, microbial genomics, bacterial characterization,
 environmental biotechnology.
 
 **Methods:** bacterial cultivation, isolation and enrichment, physiological
-and biochemical characterization, microscopy, DNA extraction, PCR, 16S rRNA
-gene analysis, whole-genome sequencing and analysis, comparative genomics,
-BioEdit.
+and biochemical characterization, microbial enumeration by most probable
+number (MPN), microscopy, DNA extraction, PCR, qPCR, 16S rRNA gene analysis,
+whole-genome sequencing and analysis, genome annotation (RAST), comparative
+genomics, BioEdit.
 
 ## Publications
 
@@ -91,7 +93,7 @@ relevant bacterial type strains, and is first author on one.
 ## Education
 
 - **PhD, Civil and Environmental Engineering** — Louisiana State University,
-  August 2023 to present.
+  August 2023 to present (expected completion 2028).
 - **BSc, Chemical Engineering** — Bangladesh University of Engineering and
   Technology (BUET), Dhaka, February 2017 to May 2022. Undergraduate work
   covered cleaner production in the power generation sector and a two-year
@@ -101,6 +103,14 @@ Before LSU he trained in chemical engineering at BUET, where his research
 included cleaner production in the power sector and biofuel-related work. That
 engineering background continues to shape how he approaches biological
 treatment as both a microbial and an engineering process.
+
+## Leadership
+
+- **Program Coordinator, Bangladeshi Students' Association (BSA) at LSU**,
+  August 2025 to May 2026. Led logistics for the first-ever Bangladeshi rock
+  band concert in Louisiana (November 2025), which drew 300+ attendees,
+  including visitors from nearby states. BSA was one of four Gold
+  Organizations at LSU's 2026 Tiger Excellence Awards.
 
 ## Links
 

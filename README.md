@@ -347,9 +347,6 @@ brings the full history with it.
   email" button, which always works. If you want a real form instead, sign up
   free at [formspree.io](https://formspree.io) and follow the instructions in
   the comment inside the `#contact` section of `index.html`.
-- **BUET dates**: the site says "2018–2020" for the research assistant role.
-  The Overleaf CV says May 2018 – Mar 2020; LinkedIn says Apr 2018 – Dec 2019.
-  Pick whichever is right and make `index.html` and `CV.tex` agree.
 
 ---
 
