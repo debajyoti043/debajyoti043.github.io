@@ -33,13 +33,13 @@ in order, are:
 
 | Section id  | What it is                                                   |
 |-------------|--------------------------------------------------------------|
-| `#top`      | Hero — portrait, name, one-line intro                        |
-| *(stats)*   | Three cards: at LSU since 2023, BUET, LSU                    |
-| `#about`    | Bio, research interests, "beyond the lab"                    |
-| `#research` | Publications list + Google Scholar link                      |
-| `#cv`       | Full CV, readable on the page, plus "View CV as PDF"         |
-| `#socials`  | Instagram / Facebook / LinkedIn link-out cards, side by side |
-| `#contact`  | Contact form + direct links                                  |
+| `#top`      | Hero: name line, headline, intro, portrait                   |
+| *(timeline)*| Two dated lines under the hero: BUET 2017–2022, LSU 2023–now |
+| `#about`    | Bio, research interests, quick facts                         |
+| `#research` | Three research areas, publications, Google Scholar link      |
+| `#cv`       | Selected experience, plus "CV as PDF" and "Full CV"          |
+| `#socials`  | "Elsewhere": Instagram / Facebook / LinkedIn, the only place social links appear |
+| `#contact`  | Email address, "Email me" and Google Scholar buttons         |
 
 ---
 
@@ -59,13 +59,11 @@ assets/
                             Colours are CSS variables near the top — change a
                             variable once and it updates everywhere.
   js/
-    main.js                 Header, footer, nav, light/dark toggle, the loading
-                            curtain, and the scroll-spy that highlights the nav
-                            as you scroll. Also holds the JOURNAL_LIVE switch.
-    motion.js               The trailing cursor, hover magnification, and the
-                            fade-in-on-scroll reveals.
-    sections.js             Draws the publications list, the Socials cards and
-                            the contact icons from the data files below.
+    main.js                 Header, footer, nav, light/dark toggle and the
+                            scroll-spy that highlights the nav as you scroll.
+                            Also holds the JOURNAL_LIVE switch.
+    sections.js             Draws the social profile rows in "Elsewhere" from
+                            the data files below.
     publications.js         YOUR PUBLICATIONS. Add or edit entries here.
     gallery-posts.js        Your social profile links, handles and which
                             profile photo each one uses.
@@ -76,8 +74,8 @@ assets/
                             viewer gives visitors the download button.
   img/
     portrait.png            Hero photo and default social avatar.
-    buet-logo.png           BUET logo (stats card).
-    lsu-logo.svg            LSU logo (stats card).
+    buet-logo.png           BUET logo (timeline under the hero).
+    lsu-logo.svg            LSU logo (timeline under the hero).
     favicon.svg             Circular browser-tab icon.
     favicon-64.png          Fallback tab icons for older browsers.
     favicon-180.png

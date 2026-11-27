@@ -54,21 +54,18 @@
     if (link && typeof SCHOLAR_URL !== "undefined") link.href = SCHOLAR_URL;
 
     if (!PUBLICATIONS.length) {
-      list.innerHTML = '<p class="dim" style="padding:1.5rem;">No publications added yet — edit <code>assets/js/publications.js</code>.</p>';
+      list.innerHTML = '<p class="dim" style="padding:1.5rem;">No publications added yet. Edit <code>assets/js/publications.js</code>.</p>';
       return;
     }
-    list.innerHTML = PUBLICATIONS.map(function (p, i) {
-      var n = String(PUBLICATIONS.length - i);
-      if (n.length < 2) n = "0" + n;
+    list.innerHTML = PUBLICATIONS.map(function (p) {
       var links = (p.links || []).map(function (l) {
-        return '<a class="arrow-link" href="' + l.url + '" target="_blank" rel="noopener">' +
-               l.label + ' <span aria-hidden="true">→</span></a>';
+        return '<a href="' + l.url + '" target="_blank" rel="noopener">' + l.label + '</a>';
       }).join("");
       return '<article class="pub">' +
-               '<div class="pub-index">' + n + '</div>' +
+               '<div class="pub-year">' + p.year + '</div>' +
                '<div>' +
                  '<div class="pub-title">' + p.title + '</div>' +
-                 '<div class="pub-meta">' + p.authors + ' · ' + p.venue + ' · ' + p.year + '</div>' +
+                 '<div class="pub-meta">' + p.authors + '. ' + p.venue + '</div>' +
                  '<div class="pub-links">' + links + '</div>' +
                '</div>' +
              '</article>';
@@ -92,22 +89,23 @@
       var src = p.avatar ? BASE + "assets/img/social/" + p.avatar : FALLBACK;
       var img = '<img src="' + src + '" alt="" ' +
                 'onerror="this.onerror=null;this.src=\'' + FALLBACK + '\';" />';
-      return '<a class="gallery-link-card" href="' + p.url + '" target="_blank" rel="noopener">' +
-               '<span class="glc-avatar">' + img +
-                 '<span class="glc-badge" data-net="' + net + '">' + svg(net, true) + '</span>' +
+      return '<a class="profile" href="' + p.url + '" target="_blank" rel="noopener">' +
+               '<span class="profile-avatar">' + img + '</span>' +
+               '<span class="profile-text">' +
+                 '<span class="profile-net">' + svg(net, false) + label + '</span>' +
+                 '<span class="profile-handle">' + p.handle + '</span>' +
+                 '<span class="profile-note">' + note + '</span>' +
                '</span>' +
-               '<strong>' + label + '</strong>' +
-               '<span class="glc-handle">' + p.handle + '</span>' +
-               '<span>' + note + '</span>' +
+               '<span class="profile-arrow" aria-hidden="true">↗</span>' +
              '</a>';
     }
 
     /* An embed section, rendered only for a platform that actually has posts. */
     function embedSection(net, title, posts, buildEmbed) {
       var p = GALLERY_PROFILES[net];
-      return '<div class="gallery-section" data-reveal>' +
+      return '<div class="gallery-section">' +
                '<div class="gallery-head">' +
-                 '<h3>' + svg(net, true) + title + '</h3>' +
+                 '<h3>' + title + '</h3>' +
                  '<a class="handle" href="' + p.url + '" target="_blank" rel="noopener">' + p.handle + ' ↗</a>' +
                '</div>' +
                '<div class="gallery-grid">' + posts.map(buildEmbed).join("") + '</div>' +
@@ -124,7 +122,7 @@
     var ownHtml = "";
     if (own.length) {
       ownHtml =
-        '<div class="gallery-section" data-reveal>' +
+        '<div class="gallery-section">' +
           '<div class="gallery-head"><h3>Photographs</h3>' +
             '<span class="handle">' + own.length + (own.length === 1 ? " photo" : " photos") + '</span>' +
           '</div>' +
@@ -144,10 +142,10 @@
        network got its own full-width section holding one card, which left the
        area looking mostly empty. */
     var profilesHtml =
-      '<div class="profile-row" data-reveal>' +
-        linkCard("instagram", "Instagram", "Photos and everyday things.") +
-        linkCard("facebook",  "Facebook",  "Albums, family and friends.") +
-        linkCard("linkedin",  "LinkedIn",  "Research updates and professional news.") +
+      '<div class="profile-row">' +
+        linkCard("instagram", "Instagram", "Photos and everyday things") +
+        linkCard("facebook",  "Facebook",  "Albums, family and friends") +
+        linkCard("linkedin",  "LinkedIn",  "Research updates and professional news") +
       '</div>';
 
     /* Embed sections appear underneath, and only for a platform that has

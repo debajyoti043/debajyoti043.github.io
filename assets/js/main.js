@@ -14,7 +14,7 @@
     { id: "about",    label: "About" },
     { id: "research", label: "Research" },
     { id: "cv",       label: "CV" },
-    { id: "socials",  label: "Socials" },
+    { id: "socials",  label: "Elsewhere" },
     { id: "contact",  label: "Contact" }
   ];
   /* Only the single-page home uses in-page "#section" links and scroll-spy.
@@ -40,8 +40,9 @@
   }
 
   /* ---- Social profiles -------------------------------------------------
-     Edit a URL here and it updates the footer, the contact page and
-     anywhere else the row is rendered. Order below is the display order. */
+     Used by window.renderSocialRow(). The row is not placed on any page at
+     the moment: social profiles live only in the Elsewhere section
+     (assets/js/gallery-posts.js), so they are not repeated three times. */
   /* Professional profiles first — this row is what an academic reader scans.
      Instagram and Facebook stay reachable but sit after the academic links.
      TODO (optional): if you create an ORCID or ResearchGate profile, add it
@@ -100,7 +101,7 @@
     '<div class="nav">' +
       '<a class="nav-brand" href="' + BASE + 'index.html">' +
         '<span class="brand-avatar"><img src="' + BASE + 'assets/img/favicon-180.png" alt="" /></span>' +
-        '<span class="brand-name"><strong>Debajyoti</strong> Deb</span>' +
+        '<span class="brand-name">Debajyoti Deb</span>' +
       '</a>' +
       '<ul class="nav-links" id="nav-links">' + navItems() + '</ul>' +
       '<div class="nav-right">' +
@@ -111,44 +112,14 @@
 
   var footerHtml =
     '<div class="container footer-inner">' +
-      '<div>' +
-        '<div class="footer-brand">Debajyoti Deb<span style="color:var(--accent)">.</span></div>' +
-        '<p class="dim" style="margin:0;font-size:0.88rem;">Environmental engineering · Louisiana State University</p>' +
-        '<p class="dim" style="margin:0.4rem 0 0;font-size:0.82rem;">&copy; <span id="year"></span> — built by hand.</p>' +
-      '</div>' +
-      '<div>' +
-        '<p class="dim" style="margin:0 0 0.75rem;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.1em;font-weight:700;">Elsewhere</p>' +
-        socialRow(false) +
-      '</div>' +
+      '<span class="footer-brand">Debajyoti Deb</span>' +
+      '<span>Environmental engineering, Louisiana State University</span>' +
+      '<span class="footer-year">&copy; <span id="year"></span></span>' +
     '</div>';
 
   function ready(fn) {
     if (document.readyState !== "loading") fn();
     else document.addEventListener("DOMContentLoaded", fn);
-  }
-
-  /* ---- Loading curtain -------------------------------------------------
-     Lifts once the window has loaded, with a minimum on-screen time so it
-     reads as intentional rather than a flicker on fast loads. The CSS
-     carries its own safety dismissal, so this only needs to handle the
-     normal path. */
-  function liftCurtain() {
-    var el = document.getElementById("curtain");
-    if (!el) return;
-    var MIN_MS = 900;
-    var start = window.__curtainStart || Date.now();
-
-    var go = function () {
-      var waited = Date.now() - start;
-      setTimeout(function () {
-        el.classList.add("lift");
-        /* stop the element from lingering in the a11y tree */
-        setTimeout(function () { if (el.parentNode) el.parentNode.removeChild(el); }, 700);
-      }, Math.max(0, MIN_MS - waited));
-    };
-
-    if (document.readyState === "complete") go();
-    else window.addEventListener("load", go);
   }
 
   /* ---- Favicon --------------------------------------------------------
@@ -192,7 +163,6 @@
     if (y) y.textContent = new Date().getFullYear();
 
     upgradeFavicon();
-    liftCurtain();
 
     /* mobile menu */
     var burger = document.getElementById("nav-toggle");
